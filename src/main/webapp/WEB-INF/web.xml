@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+    <display-name>Shelter for excercises</display-name>
+    <description>
+        Project which is supposed to help me get to know better Spring and Hibernate stuff.
+    </description>
+
+    <!--session-config>
+        <session-timeout>120</session-timeout> timeout in minutes, that's example number
+    </session-config-->
+
+    <!-- Servlets -->
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <description>I will get to know, what is going on with this, hope so.</description>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/applicaionContext.xml</param-value>
+        </init-param>
+        <load-on--startup>1</load-on--startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/rootApplicationContext.xml</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- Well, I can write here: -->
+        <!-- Servlets -->
+        <!-- Filters -->
+        <!--Custom tag librariees and JSP Config -->
+        <!--Context Parameters-->
+        <!-- JNDI Environment Variables -->
+        <!-- Listeners -->
+        <!-- Security -->
+        <!-- Error Handler -->
+        <!-- Extra MIME types -->
+        <!-- Locale -->
+        <!-- Welcome Files -->
+
+</web-app>
